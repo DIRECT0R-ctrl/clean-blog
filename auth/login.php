@@ -24,14 +24,31 @@
         } else {
             $email = $_POST['email'];
             $password = $_POST['password'];
-
+            // echo "password : " . $password;
             $login = $connection->prepare("SELECT * FROM users WHERE email = :email");
             $login->bindParam(':email', $email);
             $login->execute();
 
-            $row = $login->FETCH(PDO::FETCH_ASSOC);
+            $row = $login->fetch(PDO::FETCH_ASSOC);
+            // var_dump($row);
+            // echo $login->rowCount();
+            // var_dump($row);
+            if ($login->rowCount() > 0)
+            {
+              // if (password_verify($password, $row['password']))
+              // {
+              //   // headeer('location: ../index.php');
+              //    echo "logged in";
+              // }
+              if (!password_verify($password, $row['password']))
+              {
+                echo "do not work !";
+              } else {
 
-            echo $login->rowCount();
+                $_SESSION['username'] = $row['username'];
+                header ('location: http://localhost:8000/index.html');
+              }
+            }
         }
     }
 ?>
