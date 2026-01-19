@@ -3,7 +3,7 @@
                     <div class="post-preview">
                         <a href="posts/post.html">
 
-                            <?php echo 'hello ' . $_SESSION['username'];?> 
+                            <?php // echo 'hello ' . $_SESSION['username'];?> 
                             <h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
                             <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
                         </a>

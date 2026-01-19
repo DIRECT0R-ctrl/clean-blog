@@ -1,7 +1,12 @@
 
 <?php require "../includes/header.php"; ?>
 <?PHP require "../config/config.php"?>
-
+<?php 
+  if (isset($_SESSION['username']))
+    {
+      header('location: ../index.php');
+    }
+?>
 <?php
   if (isset($_POST['submit']))
   {

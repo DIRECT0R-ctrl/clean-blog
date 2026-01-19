@@ -1,5 +1,6 @@
 <?php require "../includes/header.php"?>
 <?php require "../config/config.php"?>
+
 <?php
     // check for submit 
 
@@ -15,7 +16,10 @@
 
     // verifyng tha password + redirect the user to the index page
 
-
+    if (isset($_SESSION['username']))
+    {
+      header('location: ../index.php');
+    }
     if (isset($_POST['submit']))
     {
         if ($_POST['email'] == '' OR $_POST['password'] == '')
@@ -46,6 +50,7 @@
               } else {
 
                 $_SESSION['username'] = $row['username'];
+                $_SESSION['id'] = $row['id'];
                 header ('location: http://localhost:8000/index.html');
               }
             }

@@ -34,7 +34,7 @@
                     <?php if(isset($_SESSION['username'])) : ?>
 
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="posts/create.php">create</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../posts/create.php">create</a></li>
                     <li class="nav-item dropdown mt-3">
                     
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,7 +43,7 @@
                     
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Profil</a></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                        <li><a class="dropdown-item" href="../auth/logout.php">Logout</a></li>
                         <!-- <li><hr class="dropdown-divider"></li> -->
                         <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                         </ul>
@@ -52,7 +52,7 @@
                     <?php else : ?>
 
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="auth/login.php">login</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="register.php">register</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="auth/register.php">register</a></li>
 
                     <?php endif; ?>
 
